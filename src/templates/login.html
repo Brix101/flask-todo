@@ -1,40 +1,36 @@
 {% extends "base.html" %} {% block content %}
-  <main class="form-signin w-100 m-auto"">
-    <form method="POST" action="/login">
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-      {% with messages = get_flashed_messages() %} {% if messages %}
-      <div class="alert alert-danger" role="alert">{{ messages[0] }}</div>
-      {% endif %} {% endwith %}
-      <div class="form-floating">
-        <input
-          class="form-control"
-          type="email"
-          id="floatingInput"
-          name="email"
-          placeholder="name@example.com"
-          autofocus=""
-        />
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input
-          id="floatingPassword"
-          class="form-control"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <label for="floatingPassword">Password</label>
-      </div>
+<main class="form-signin w-100 m-auto">
+  <form method="POST" action="/login">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="alert alert-danger" role="alert">{{ messages[0] }}</div>
+    {% endif %} {% endwith %}
+    <div class="form-floating">
+      <input
+        class="form-control"
+        type="email"
+        id="floatingInput"
+        name="email"
+        placeholder="name@example.com"
+        autofocus=""
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input
+        id="floatingPassword"
+        class="form-control"
+        type="password"
+        name="password"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
 
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me" /> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-dark" type="submit">
-        Sign in
-      </button>
-    </form>
-  </main>
+    <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
+  </form>
+</main>
 {% endblock %}
