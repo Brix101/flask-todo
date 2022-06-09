@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+<div style="margin-top: 50px" class="ui container">
+  <h1 class="ui center aligned header">To Do App</h1>
+
+  <form class="d-flex" action="/add" method="post">
+    <div class="form-group mb-2">
+      <label for="exampleInputTitle">Todo Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputTitle"
+        aria-describedby="titleHelp"
+        placeholder="Title"
+        required
+      />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+
+  <hr />
+
+  {% for todo in todo_list %}
+  <div class="card mb-2">
+    <div class="card-header">Todo {{ todo_list.index(todo) }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ todo.title }}</h5>
+      {% if todo.complete == False %}
+      <p class="card-text">Not Complete</p>
+      {% else %}
+      <p class="card-text">Completed</p>
+      {% endif %}
+      <a class="btn btn-secondary" href="/update/{{ todo.id }}">Update</a>
+      <a class="btn btn-danger" href="/delete/{{ todo.id }}">Delete</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
