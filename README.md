@@ -4,7 +4,7 @@
 
 Install using `pip`
 
-Step 1. Clone this repository: https://github.com/Brix101/Open-CV-Plate-Recognition
+Step 1. Clone this repository: https://github.com/Brix101/flask-todo
 
 Step 2. Create a new virtual environment
 
