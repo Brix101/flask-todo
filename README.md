@@ -28,6 +28,7 @@ pip install -r requirements.txt
 Step 5. Run Program
 
 ```bash
-$export FLASK_APP=src
+$export FLASK_APP=src # Linux
+$set FLASK_APP=src # Windows
 $flask run
 ```
