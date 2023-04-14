@@ -22,7 +22,7 @@ source venv/bin/activate # Linux
 Step 4. Install Requirements
 
 ```bash
-pip install -r requirements.tx
+pip install -r requirements.txt
 ```
 
 Step 5. Run Program
